@@ -1,0 +1,40 @@
+.center-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-panel {
+    flex: 1;
+    width: 200px;
+    background: rgba(102, 16, 242, 0.05);
+    height: ~"calc(100vh - 56px)";
+    border-right: 1px solid #6610f2;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    bottom: 0;
+
+    .nav-link {
+        color: #6610f2;
+        transition: all linear 0.2s;
+
+        &:hover {
+            background: rgba(102, 16, 242, 0.75);
+            color: #fff;
+        }
+    }
+}
+
+.right-panel {
+    width: ~"calc(100vw - 201px)";
+    margin-left: 200px;
+    height: ~"calc(100vh - 56px)";
+    overflow: auto;
+}
+
+.bg-indigo {
+    background-color: #6610f2;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}

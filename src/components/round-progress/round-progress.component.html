@@ -1,0 +1,175 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/home-page">Home</a></li>
+    <li class="breadcrumb-item"><a routerLink="/component-page">Components</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Round Progress</li>
+  </ol>
+</nav>
+
+<div class="mt-3">
+  <h5>Import: App Module</h5>
+  <pre class="mb-0">
+    <code>
+    {{import}}
+    </code>
+  </pre>
+  
+  <h5>Syntax:</h5>
+  <pre class="mb-0">
+    <code>
+    &lt;ez-round-progress [progress]="progress" progressColor="#6A1B9A" progressBgColor="#CFD8DC"
+      [radius]=60 [progressStrokeWdt]=2 [pathStrokeWdt]=5
+      [showText]=true textCircleColor="#45B649" [fontSize]=18 [innerCircleRad]=45 
+      textColor="#fff" text="Hi"&gt;
+    &lt;/ez-round-progress&gt;
+    </code>
+  </pre>
+</div>
+
+<div class="mt-3">
+  <h3 class="mb-3">Examples:</h3>
+  <h5 class="mb-4">Default</h5>
+  <mat-accordion >
+    <mat-expansion-panel expanded=true>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Preview
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="example_preview">
+        <ez-round-progress [progress]="progress" progressColor="#6A1B9A" textCircleColor="#45B649" progressBgColor="#CFD8DC"
+        [showText]=true [radius]=60 [fontSize]=18 [progressStrokeWdt]=2 [pathStrokeWdt]=5 [innerCircleRad]=45 textColor="#fff" text="Hi" (svgClick)="clickOnSvg($event)"></ez-round-progress>
+        <ez-round-progress [progress]="progress" progressColor="#0366d6" textCircleColor="#000" progressBgColor="#CFD8DC"
+        [showText]=true [radius]=60 [fontSize]=15 [progressStrokeWdt]=5 [pathStrokeWdt]=8 [innerCircleRad]=40 textColor="#fff" (svgClick)="clickOnSvg($event)"></ez-round-progress>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Syntax
+        </mat-panel-title>
+        <mat-panel-description>
+          Code Pattern
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <pre class="mb-0">
+        <code>
+        &lt;ez-round-progress [progress]="progress" progressColor="#6A1B9A" textCircleColor="#45B649" progressBgColor="#CFD8DC"
+          [showText]=true [radius]=60 [fontSize]=18 [progressStrokeWdt]=2 [pathStrokeWdt]=5 [innerCircleRad]=45 textColor="#fff" text="Hi" (svgClick)="clickOnSvg($event)"&gt;&lt;/ez-round-progress&gt;
+        &lt;ez-round-progress [progress]="progress" progressColor="#0366d6" textCircleColor="#000" progressBgColor="#CFD8DC"
+          [showText]=true [radius]=60 [fontSize]=15 [progressStrokeWdt]=5 [pathStrokeWdt]=8 [innerCircleRad]=40 textColor="#fff" (svgClick)="clickOnSvg($event)"&gt;&lt;/ez-round-progress&gt;
+        </code>
+      </pre>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+<div class="mt-5">
+  <h5>Properties: </h5>
+  <table class="table table-striped table-bordered table-hover table-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Values</th>
+        <th>Mandatory / Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>progress</td>
+          <td>number: '%age value'</td>
+          <td>Mandatory</td>
+          <td>Display the progress in percentage.</td>
+        </tr>
+        <tr>
+          <td>radius</td>
+          <td>number: 'pixel value'</td>
+          <td>Default: 50px</td>
+          <td>Determine the size of the circle.</td>
+        </tr>
+        <tr>
+          <td>progressColor</td>
+          <td>string: 'hex or rgb/a value'</td>
+          <td>Default: #0366d6</td>
+          <td>Determine the color of the progress bar.</td>
+        </tr>
+        <tr>
+          <td>progressBgColor</td>
+          <td>string: 'hex or rgb/a value'</td>
+          <td>Default: #cccccc</td>
+          <td>Determine the color of the background of progress bar.</td>
+        </tr>
+        <tr>
+          <td>pathStrokeWdt</td>
+          <td>number: 'pixel value'</td>
+          <td>Default: 3px</td>
+          <td>Determine the width of the progress bar.</td>
+        </tr>
+        <tr>
+          <td>progressStrokeWdt</td>
+          <td>number: 'pixel value'</td>
+          <td>Default: 5px</td>
+          <td>Determine the width of the background of progress bar.</td>
+        </tr>
+        <tr>
+          <td>showText</td>
+          <td>boolean: 'true/false'</td>
+          <td>Default: true</td>
+          <td>Determine whether to show inner circle and text inside it.</td>
+        </tr>
+        <tr>
+          <td>innerCircleRad</td>
+          <td>number: 'pixel value'</td>
+          <td>Default: (radius - 5) px</td>
+          <td>Determine the size of the inner circle.</td>
+        </tr>
+        <tr>
+          <td>fontSize</td>
+          <td>number: 'pixel value'</td>
+          <td>Default: 20px</td>
+          <td>Determine the size of inner text.</td>
+        </tr>
+        <tr>
+          <td>textCircleColor</td>
+          <td>string: 'hex or rgb/a value'</td>
+          <td>Default: #0366d6</td>
+          <td>Determine the color of the text circle.</td>
+        </tr>
+        <tr>
+          <td>textColor</td>
+          <td>string: 'hex or rgb/a value'</td>
+          <td>Default: #ffffff</td>
+          <td>Determine the color of the text inside inner circle.</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>string: 'hex or rgb/a value'</td>
+          <td>Default: %age value</td>
+          <td>Determine the content of the text circle. Default is the progress %age, use this to override text content.</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="mt-5">
+  <h5>Events:</h5>
+  <table class="table table-striped table-bordered table-hover table-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Parameter</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>clickOnSvg</td>
+          <td>$event</td>
+          <td>Returns the current progress %age (event.progress) as well as text value (event.text).</td>
+        </tr>
+    </tbody>
+  </table>
+</div>

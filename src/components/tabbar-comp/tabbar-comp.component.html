@@ -1,0 +1,295 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/home-page">Home</a></li>
+    <li class="breadcrumb-item"><a routerLink="/component-page">Components</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Tabbar</li>
+  </ol>
+</nav>
+
+<div class="mt-3">
+  <h5>Import:</h5>
+  <pre class="mb-0">
+    <code>
+    {{import}}
+    </code>
+  </pre>
+  
+  <h5>Syntax:</h5>
+  <pre class="mb-0">
+    <code>
+    {{syntax}}
+    </code>
+  </pre>
+</div>
+
+<div class="mt-3">
+  <h3 class="mb-5">Examples:</h3>
+  <h5 class="mb-4">Basic: Horizontal</h5>
+  <mat-accordion >
+    <mat-expansion-panel expanded=true>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Preview
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="example_preview">
+        <ez-tabbar styleClass="custom_style_tabbar" headerStyleClass="custom_style_tabheader" bodyStyleClass="custom_style_tabbody" direction="horizontal" scrollHt=150 height=120
+        (tabSelect)="tabClicked($event)">
+          <ez-tab tabTitle="Person">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+          </ez-tab>
+          <ez-tab tabTitle="Extras" active="true">
+            <div>
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+            </div>
+          </ez-tab>
+        </ez-tabbar>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Syntax
+        </mat-panel-title>
+        <mat-panel-description>
+          Code Pattern
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <pre class="mb-0">
+        <code>
+        &lt;ez-tabbar styleClass="custom_style_tabbar" headerStyleClass="custom_style_tabheader" bodyStyleClass="custom_style_tabbody" direction="horizontal" scrollHt=150 height=120&gt;
+          &lt;ez-tab tabTitle="Person"&gt;
+              Content
+          &lt;/ez-tab&gt;
+          &lt;ez-tab tabTitle="Extras"&gt;
+              &lt;div&gt;Hello, User&lt;/div&gt;
+          &lt;/ez-tab&gt;
+        &lt;/ez-tabbar&gt;
+        </code>
+      </pre>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <h5 class="mb-4 mt-4">Basic: Vertical</h5>
+  <mat-accordion>
+    <mat-expansion-panel expanded=true>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Preview
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="example_preview">
+        <ez-tabbar styleClass="custom_style_tabbar" headerStyleClass="custom_style_tabheader" bodyStyleClass="custom_style_tabbody" direction="vertical" scrollHt=150 height=120
+        (tabSelect)="tabClicked($event)">
+          <ez-tab tabTitle="Person">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+          </ez-tab>
+          <ez-tab tabTitle="Extras" active="true">
+              <div>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+              </div>
+          </ez-tab>
+        </ez-tabbar>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Syntax
+        </mat-panel-title>
+        <mat-panel-description>
+            Code Pattern
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <pre class="mb-0">
+        <code>
+        &lt;ez-tabbar styleClass="custom_style_tabbar" headerStyleClass="custom_style_tabheader" bodyStyleClass="custom_style_tabbody" direction="vertical" scrollHt=150 height=120&gt;
+          &lt;ez-tab tabTitle="Person"&gt;
+              Content
+          &lt;/ez-tab&gt;
+          &lt;ez-tab tabTitle="Extras"&gt;
+              &lt;div&gt;Hello, User&lt;/div&gt;
+          &lt;/ez-tab&gt;
+        &lt;/ez-tabbar&gt;
+        </code>
+      </pre>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <h5 class="mb-4 mt-4">Template</h5>
+  <mat-accordion>
+    <mat-expansion-panel expanded=true>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Preview
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="example_preview">
+        <ez-tabbar styleClass="custom_style_tabbar" headerStyleClass="custom_style_tabheader" bodyStyleClass="custom_style_tabbody" direction="horizontal" scrollHt=150 height=120
+        (tabSelect)="tabClicked($event)">
+          <ez-tab tabTitle="Person">
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+          </ez-tab>
+          <ez-tab [tabTitle]="heading1" [tabBody]="hello" active="true"></ez-tab>
+          <ez-tab tabTitle="Extras">
+              <div>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+              </div>
+          </ez-tab>
+          <ng-template #hello>
+              <div>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+              </div>
+          </ng-template> 
+          <ng-template #heading1>
+              <span class="fa fa-user"></span> <span style="padding-left: 10px">User</span>
+          </ng-template>
+        </ez-tabbar>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Syntax
+        </mat-panel-title>
+        <mat-panel-description>
+            Code Pattern
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <pre class="mb-0">
+        <code>
+        &lt;ez-tabbar styleClass="custom_style_tabbar" headerStyleClass="custom_style_tabheader" bodyStyleClass="custom_style_tabbody" direction="horizontal" scrollHt=150 height=120&gt;
+          &lt;ez-tab tabTitle="Person"&gt;
+              Content
+          &lt;/ez-tab&gt;
+          &lt;ez-tab [tabTitle]="heading1" [tabBody]="hello"&gt;&lt;/ez-tab&gt;
+          &lt;ez-tab tabTitle="Extras"&gt;
+              &lt;div&gt;Hello, User&lt;/div&gt;
+          &lt;/ez-tab&gt;
+          &lt;ng-template #hello&gt;
+              &lt;div&gt;Extra Content here.&lt;/div&gt;
+          &lt;/ng-template&gt; 
+          &lt;ng-template #heading1&gt;
+              &lt;span class="fa fa-user"&gt;&lt;/span&gt; &lt;span style="padding-left: 10px"&gt;User&lt;/span&gt;
+          &lt;/ng-template&gt;
+        &lt;/ez-tabbar&gt;
+        </code>
+      </pre>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+<div class="mt-5">
+  <h5>Properties: Tabbar</h5>
+  <table class="table table-striped table-bordered table-hover table-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Values</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>styleClass</td>
+          <td>string: custom</td>
+          <td>NA</td>
+          <td>Takes in given class name and applys to the tab container division.</td>
+        </tr>
+        <tr>
+          <td>headerStyleClass</td>
+          <td>string: custom</td>
+          <td>NA</td>
+          <td>Takes in given class name and applys to the tab header container division.</td>
+        </tr>
+        <tr>
+          <td>bodyStyleClass</td>
+          <td>string: custom</td>
+          <td>NA</td>
+          <td>Takes in given class name and applys to the tab body container division.</td>
+        </tr>
+        <tr>
+          <td>direction</td>
+          <td>string: vertical / horizontal</td>
+          <td>horizontal</td>
+          <td>Defines the layout of the tabbar.</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>number: (in pixels)</td>
+          <td>NA</td>
+          <td>Defines the fixed height of tabbar irrespective of content height.</td>
+        </tr>
+        <tr>
+          <td>scrollHt</td>
+          <td>number: (in pixels)</td>
+          <td>NA</td>
+          <td>Defines the height of tabbar after which scroll will be added automatically.</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="mt-5">
+  <h5>Properties: Tab</h5>
+  <table class="table table-striped table-bordered table-hover table-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Values</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>tabTitle</td>
+          <td>string / templateRef</td>
+          <td>NA</td>
+          <td>Can provide a string or a ng-template ref.</td>
+        </tr>
+        <tr>
+          <td>tabBody</td>
+          <td>string / templateRef</td>
+          <td>NA</td>
+          <td>Can provide a string or a ng-template ref.</td>
+        </tr>
+        <tr>
+          <td>active</td>
+          <td>number: (index)</td>
+          <td>NA</td>
+          <td>Active tab to be selected on init.</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="mt-5">
+  <h5>Events: Tabbar</h5>
+  <table class="table table-striped table-bordered table-hover table-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Parameter</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>tabSelect</td>
+          <td>$event</td>
+          <td>Returns the tabs list as an array.</td>
+        </tr>
+    </tbody>
+  </table>
+</div>

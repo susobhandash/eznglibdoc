@@ -1,0 +1,140 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/home-page">Home</a></li>
+      <li class="breadcrumb-item"><a routerLink="/component-page">Components</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Progress Bar</li>
+    </ol>
+  </nav>
+  
+  <div class="mt-3">
+    <h5>Import_1: App Module</h5>
+    <pre class="mb-0">
+      <code>
+      {{import1}}
+      </code>
+    </pre>
+    
+    <h5>Syntax:</h5>
+    <pre class="mb-0">
+      <code>
+      {{syntax}}
+      </code>
+    </pre>
+  </div>
+  
+  <div class="mt-3">
+    <h3 class="mb-3">Examples:</h3>
+    <h5 class="mb-4">Basic</h5>
+    <mat-accordion >
+      <mat-expansion-panel expanded=true>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Preview
+          </mat-panel-title>
+          <mat-panel-description>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="example_preview">
+          <ez-progress-bar [progress]=progress [progressOptions]="progressOptions" ></ez-progress-bar>
+          <hr/>
+          <h6>Options: Live Preview</h6>
+          <div class="row no-gutters form-group">
+            <div class="col-3 mb-2"><label class="col-12 text-center">Progress</label><input class="form-control" type="number" [(ngModel)]="progress"/></div>
+            <div class="col-3 mb-2 pl-2"><label class="col-12 text-center">Height</label><input class="form-control" type="number" [(ngModel)]="progressOptions.height"/></div>
+            <div class="col-3 mb-2 pl-2"><label class="col-12 text-center">BG Color</label><input class="form-control" type="color" [(ngModel)]="progressOptions.bgColor"/></div>
+            <div class="col-3 mb-2 pl-2"><label class="col-12 text-center">Text Color</label><input class="form-control" type="color" [(ngModel)]="progressOptions.textColor"/></div>
+            <div class="col-3 mb-2"><label class="col-12 text-center">Progress BG Color</label><input class="form-control" type="color" [(ngModel)]="progressOptions.progressBgColor"/></div>
+            <div class="col-3 mb-2 pl-2"><label class="col-12 text-center">Time (ms)</label><input class="form-control" type="number" [(ngModel)]="progressOptions.time"/></div>
+            <div class="col-3 mb-2 pl-2 text-center">
+              <label class="col-12 text-center">Show Text</label>
+              <ez-checkbox [(ngModel)]="progressOptions.displayValue" style="display: inline-block;" slideToggle=true></ez-checkbox>
+              <!-- <input class="form-control" type="checkbox" [(ngModel)]="progressOptions.displayValue"/> -->
+            </div>
+            <div class="col-3 mb-2 pl-2"><label class="col-12 text-center">Timing Function</label><input class="form-control" type="text" [(ngModel)]="progressOptions.timingFunc"/></div>
+            <div class="col-3 mb-2 pl-2 text-center">
+              <label class="col-12 text-center">Striped</label>
+              <ez-checkbox [(ngModel)]="progressOptions.striped" style="display: inline-block;"></ez-checkbox>
+              <!-- <input class="form-control" type="checkbox" [(ngModel)]="progressOptions.displayValue"/> -->
+            </div>
+            <div class="col-3 mb-2 pl-2 text-center">
+              <label class="col-12 text-center">Stripe Animated</label>
+              <ez-checkbox [(ngModel)]="progressOptions.stripeAnimated"  style="display: inline-block;"></ez-checkbox>
+              <!-- <input class="form-control" type="checkbox" [(ngModel)]="progressOptions.displayValue"/> -->
+            </div>
+          </div>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Syntax
+          </mat-panel-title>
+          <mat-panel-description>
+            Code Pattern
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <pre class="mb-0">
+          <code>
+              &lt;ez-progress-bar [progress]=progress [progressOptions]="progressOptions" &gt;&lt;/ez-progress-bar&gt;
+          </code>
+        </pre>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  
+  <div class="mt-5">
+    <h5>Properties: </h5>
+    <table class="table table-striped table-bordered table-hover table-sm">
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th>Values</th>
+          <th>Mandatory</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>progress</td>
+            <td>Number</td>
+            <td>Yes</td>
+            <td>Receives the Percentage (%) value for progress.</td>
+          </tr>
+          <tr>
+            <td>progressOptions</td>
+            <td>
+              Object: {{'{ }'}}
+              <div>
+                <span class="highlight">height:</span> number <b>(Default: 3)</b>
+              </div>
+              <div>
+                <span class="highlight">bgColor:</span> string <b>(Default: '#0366d6')</b>
+              </div>
+              <div>
+                <span class="highlight">textColor:</span> string <b>(Default: '#ffffff')</b>
+              </div>
+              <div>
+                <span class="highlight">progressBgColor:</span> string <b>(Default: 'transparent')</b>
+              </div>
+              <div>
+                <span class="highlight">time:</span> number <b>(Default: '300') In 'ms'</b>
+              </div>
+              <div>
+                <span class="highlight">displayValue:</span> boolean <b>(Default: false)</b>
+              </div>
+              <div>
+                <span class="highlight">stripe:</span> boolean <b>(Default: false)</b>
+              </div>
+              <div>
+                <span class="highlight">stripeAnimated:</span> boolean <b>(Default: false)</b>
+              </div>
+              <div>
+                <span class="highlight">timingFunc:</span> string <b>(Default: 'ease') ease / ease-in/ ease-out / ease-in-out / linear</b>
+              </div>
+            </td>
+            <td>No</td>
+            <td>Receives the object for configuartion of the component.</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
